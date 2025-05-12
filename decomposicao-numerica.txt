@@ -1,0 +1,177 @@
+Questão 2: Decomposição numérica de 142.981
+🎯 Objetivo: Explicação da decomposição com detalhamento matemático.
+🧠 Prompt:
+Faça a decomposição numérica do número 142.981 detalhadamente, indicando o valor posicional de cada algarismo. Apresente a resposta em forma de soma das potências de dez, explicando cada etapa.
+
+
+RESPOSTA:
+
+A decomposição numérica do número 142.981 pode ser feita analisando o valor posicional de cada algarismo, começando da direita para a esquerda.
+
+Número: 142.981
+A decomposição será feita em potências de 10, de acordo com o valor posicional de cada algarismo.
+
+Primeiro Algorismo (1) - Está na casa das centenas de milhar:
+
+Valor posicional: 
+1
+×
+10
+5
+=
+1
+×
+100.000
+=
+100.000
+1×10 
+5
+ =1×100.000=100.000
+
+Segundo Algorismo (4) - Está na casa das dezenas de milhar:
+
+Valor posicional: 
+4
+×
+10
+4
+=
+4
+×
+10.000
+=
+40.000
+4×10 
+4
+ =4×10.000=40.000
+
+Terceiro Algorismo (2) - Está na casa das milhares:
+
+Valor posicional: 
+2
+×
+10
+3
+=
+2
+×
+1.000
+=
+2.000
+2×10 
+3
+ =2×1.000=2.000
+
+Quarto Algorismo (9) - Está na casa das centenas:
+
+Valor posicional: 
+9
+×
+10
+2
+=
+9
+×
+100
+=
+900
+9×10 
+2
+ =9×100=900
+
+Quinto Algorismo (8) - Está na casa das dezenas:
+
+Valor posicional: 
+8
+×
+10
+1
+=
+8
+×
+10
+=
+80
+8×10 
+1
+ =8×10=80
+
+Sexto Algorismo (1) - Está na casa das unidades:
+
+Valor posicional: 
+1
+×
+10
+0
+=
+1
+×
+1
+=
+1
+1×10 
+0
+ =1×1=1
+
+Decomposição final:
+Agora, somamos todos os valores encontrados:
+
+100.000
++
+40.000
++
+2.000
++
+900
++
+80
++
+1
+100.000+40.000+2.000+900+80+1
+Portanto, a decomposição numérica do número 142.981 em forma de soma das potências de 10 é:
+
+142.981
+=
+1
+×
+10
+5
++
+4
+×
+10
+4
++
+2
+×
+10
+3
++
+9
+×
+10
+2
++
+8
+×
+10
+1
++
+1
+×
+10
+0
+142.981=1×10 
+5
+ +4×10 
+4
+ +2×10 
+3
+ +9×10 
+2
+ +8×10 
+1
+ +1×10 
+0
+ 
+Essa é a decomposição detalhada do número, mostrando como cada algarismo contribui de acordo com seu valor posicional.

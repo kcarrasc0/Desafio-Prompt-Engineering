@@ -1,0 +1,84 @@
+Questão 1: Ray Tracing e cor de pixel
+🎯 Objetivo: Explicação técnica de como o algoritmo de ray tracing calcula a cor de um pixel.
+🧠 Prompt:
+Explique passo a passo como o algoritmo de Ray Tracing calcula a cor de um pixel em uma cena 3D renderizada, considerando fatores como luz, sombra, reflexão e refração. Utilize exemplos visuais ou analogias simples para facilitar o entendimento técnico.
+
+
+RESPOSTA:
+
+O algoritmo de Ray Tracing (ou Traçado de Raios) é uma técnica de renderização gráfica utilizada para simular a forma como a luz interage com os objetos em uma cena 3D, com o objetivo de calcular a cor de cada pixel. Ele é bastante usado em computação gráfica, principalmente para produzir imagens fotorrealistas, devido à sua capacidade de simular de maneira precisa fenômenos como luz, sombra, reflexão e refração.
+
+Aqui está o passo a passo básico de como o algoritmo calcula a cor de um pixel:
+
+1. Lançamento do Raio (Ray Casting)
+O algoritmo começa com o lançamento de raios de luz imaginários a partir da câmera em direção à cena 3D. Cada pixel da tela será associado a um desses raios. O objetivo é descobrir qual objeto o raio encontra à medida que viaja pela cena.
+
+Exemplo visual:
+
+Imagine que você está olhando para uma bola de futebol em um campo. A câmera lança raios a partir de cada pixel da tela e verifica qual objeto (neste caso, a bola) o raio atinge.
+
+2. Detecção de Interseção
+O próximo passo é calcular a interseção do raio com os objetos na cena. O algoritmo verifica se o raio atinge algum objeto, como uma esfera, plano ou qualquer outro tipo de geometria. Se o raio não atingir nada, o pixel recebe uma cor de fundo (geralmente uma cor do céu ou do ambiente).
+
+Exemplo visual:
+
+Um raio lançado de um pixel pode atingir a superfície de uma esfera ou um plano. Se o raio atinge a esfera, o algoritmo continua para os próximos passos.
+
+3. Determinação da Cor Básica do Objeto
+Quando o raio atinge um objeto, o algoritmo calcula a cor base do ponto de interseção. Esta cor depende da textura ou material do objeto (como um padrão de cor ou um material específico, como metal ou vidro). Para isso, o algoritmo verifica as propriedades de iluminação do objeto.
+
+Exemplo visual:
+
+Se a esfera tiver a cor vermelha e não for reflexiva nem translúcida, o algoritmo atribui a cor vermelha ao ponto de interseção.
+
+4. Sombra (Shadow)
+Para determinar se o ponto de interseção está iluminado ou sombreado, o algoritmo lança um raio de sombra do ponto de interseção em direção à fonte de luz. Se o raio colidir com outro objeto antes de alcançar a luz, isso significa que o ponto está sombreado. Caso contrário, o ponto está iluminado diretamente pela fonte de luz.
+
+Exemplo visual:
+
+Se houver uma parede entre o ponto de interseção e a fonte de luz, o ponto ficará sombreado. Caso contrário, a luz da fonte atingirá diretamente o ponto e o iluminará.
+
+5. Reflexão (Reflection)
+Se o objeto for reflexivo, como um espelho ou uma superfície de água, o algoritmo calcula o raio reflexivo. Esse raio é lançado na direção oposta ao raio de entrada (com base no ângulo de incidência). O algoritmo então realiza o mesmo processo de traçar raios e calcular cores, agora para o ponto em que o raio reflexivo atinge outro objeto.
+
+Exemplo visual:
+
+Se o ponto de interseção estiver em uma superfície reflexiva, como um espelho, a imagem refletida do cenário será projetada na superfície.
+
+6. Refração (Refraction)
+Para objetos transparentes ou translúcidos, como vidro ou água, o algoritmo calcula a refração da luz. Isso acontece porque a luz muda de direção ao passar por materiais com diferentes índices de refração. O algoritmo traça um raio refrativo que entra no material e segue através dele, e depois calcula a cor de saída do outro lado do objeto.
+
+Exemplo visual:
+
+Se você olhar através de uma taça de vidro cheia de água, a luz será refratada ao passar através do vidro e da água. O algoritmo calculará como essa luz se comporta ao entrar e sair do objeto.
+
+7. Composição Final da Cor
+Finalmente, a cor do pixel é composta considerando todas as interações de luz, sombra, reflexão e refração. A cor final será uma combinação de:
+
+A cor base do objeto.
+
+O efeito da iluminação (direta ou indireta).
+
+O impacto das sombras.
+
+As contribuições de reflexão e refração, caso existam.
+
+Exemplo visual:
+
+Se um objeto refletivo, como uma esfera metálica, estiver em uma cena iluminada por uma luz suave e tiver um fundo colorido, a cor final do pixel refletirá não apenas a cor do objeto, mas também as cores da cena ao seu redor, através da reflexão.
+
+Resumo de Fatores:
+Luz Direta: Contribui para a iluminação direta do objeto.
+
+Sombra: Verifica se um ponto está sombreado devido à obstrução de uma fonte de luz.
+
+Reflexão: Raios de luz são refletidos em superfícies reflexivas, levando a cenas mais complexas.
+
+Refração: Luz passa através de materiais transparentes ou translúcidos e é desviada.
+
+Cor Base: Cor do objeto sem interações externas.
+
+Analogia:
+Imagine que você está jogando um jogo de "billiards" (sinuca). Cada vez que a bola branca bate em outra bola ou em uma parede, ela pode mudar sua direção (reflexão) ou atravessar uma superfície translúcida (refração). O algoritmo de Ray Tracing simula esses comportamentos para calcular a cor final de cada ponto.
+
+Essa combinação de passos torna o Ray Tracing uma técnica poderosa, capaz de gerar imagens de aparência realista ao simular fielmente o comportamento da luz.
